@@ -1,0 +1,120 @@
+#integer
+likes: 1000000
+comments: 1000
+shares: !!int 300
+dislikes: !!int -43
+bin: !!int 0b1001
+oct: !!int 06577
+hex: !!int 0x62
+exp: 3.23E56
+
+#string
+name: satoshi
+gender: !!str male
+bio: |
+Hey i am satoshi
+This is my bio.
+
+#float
+marks: 88.76
+grade: !!float 9.80
+
+#bool
+Passed: Yes #y, YES, True, etc
+#No, NO, n, False, etc
+
+#date
+date: !!timestamp 2022-02-04
+time: !!timestamp 2022-02-04T02:59:43.1Z
+
+infinite: .inf
+nan: .nan
+
+null: !!Null Null
+keys: ~
+
+# lists/seq
+- Ichika
+- Nino
+- Miku
+- Yotsuba
+- Itsuki
+
+[Ichika, Nino, Miku, Yotsuba, Itsuki]
+
+#sparse list/sequence
+- Hello
+- Konnichiha
+- 
+- Ola
+
+#nested lists/sequence
+-
+  - Yosuga no Sora
+  - Interspecies Reviewers
+- 
+  - Aki sora
+  - Overflow
+
+#maps
+Anime: Quintessential Quintuplets
+characters:
+  - Ichika
+  - Nino
+  - Miku
+  - Yotsuba
+  - Itsuki
+
+{Anime: Quintessential Quintuplets, characters: [Ichika, Nino, Miku, Yotsuba, Itsuki]}
+
+#nested maps
+Name: Satoshi
+age: 22
+job:
+  role: software engineer
+  dept: blockchain
+
+#pairs
+Name: satoshi
+job: !!pairs
+  - role: software engineer
+  - role: fullstack developer
+
+job: [role: software engineer, role: software engineer]
+
+# map list
+Name: satoshi
+job: 
+  - role: software engineer
+  - dept: blockchain
+
+#sets
+names: !!set
+  ? satoshi
+  ? miyuki
+
+#
+people: !!omap
+  - Satoshi:
+      name: Yukiteiru Satoshi
+      age: 22
+  - Adrian:
+      name: Adrian
+      age: 25
+
+#groups
+Likings: &likes
+  anime: Yu Yu hakusho
+  manga: Oyasumi pun pun
+
+Person:
+  name: Satoshi
+  <<: *likes
+
+Person:
+  name: Miyuki
+  <<: *likes
+  manga: We never learn
+
+
+
