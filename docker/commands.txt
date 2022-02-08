@@ -1,0 +1,9 @@
+docker build . -t ngnix:satoshi
+
+-t: tage the image
+
+docker run --name website -p 8080:80 -d ngnix:satoshi
+
+--name: name the container
+-p: map host port to docker port
+-d: run in detach mode
